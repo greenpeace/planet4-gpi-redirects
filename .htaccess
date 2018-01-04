@@ -291,3 +291,5 @@ Redirect 301 /news/Blogs/makingwaves/silent-spring-bird-extinction-rex-weyler/bl
 Redirect 301 /press/releases/2014/Greenpeace-ship-Arctic-Sunrise-departs-Russian-port-after-ten-months-in-custody/ https://www.greenpeace.org/international/ships/7648/greenpeace-ship-arctic-sunrise-departs-russian-port-after-ten-months-in-custody/
 Redirect 301 /news/Blogs/makingwaves/food-for-life-europes-pesticide-addiction/blog/54396/ https://www.greenpeace.org/international/story/7651/a-pestiferous-problem/
 Redirect 301 /news/Blogs/makingwaves/Samsung-Galaxy-Note7-ewaste-recall/blog/57923/ https://www.greenpeace.org/international/story/7652/samsung-its-time-to-walk-the-talk/
+
+RewriteRule ^international/en.*$ http://www.greenpeace.org/archive-international/en/ [R=301,L]
