@@ -4,7 +4,7 @@ set -eou pipefail
 input_redirects="./redirects"
 input_rewrites="./rewrites"
 
-apache_output_file="apache/.htaccess"
+apache_output_file="apache/redirects.conf"
 nginx_output_file="nginx/redirects.conf"
 
 declare -a a_redirects
