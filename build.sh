@@ -42,7 +42,7 @@ function read_redirects() {
 }
 
 function write_redirects() {
-  local apache_output="RewriteEngine on\n"
+  local apache_output=""
   local nginx_output=""
 
   for redirect in "${a_redirects[@]}"
@@ -54,7 +54,7 @@ function write_redirects() {
 
     [[ -z $dest ]] && echo "Syntax error in file: destination is blank for source $source" && exit 1
 
-    apache_output+="Redirect 301 $source $dest\n"
+    apache_output+="Redirect permanent $source $dest\n"
     nginx_output+="location $source {\n\t\treturn 301 $dest\n}\n\n"
   done
 
@@ -106,7 +106,7 @@ function write_rewrites() {
 
     [[ -z $dest ]] && echo "Syntax error in file: destination is blank for source $source" && exit 1
 
-    apache_output+="RewriteRule $source $dest [R=301,L]"
+    apache_output+="RedirectMatch permanent $source $dest"
     nginx_output+="location ~ $source {\n\t\treturn 301 $dest\n}\n\n"
   done
 

@@ -1,1 +1,1 @@
-^international/en.*$ http://www.greenpeace.org/archive-international/en/
+^/international/en/(.*)$ http://www.greenpeace.org/archive-international/en/$1
