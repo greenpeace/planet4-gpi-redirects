@@ -7,8 +7,8 @@ input_rewrites="./rewrites"
 apache_output_file="apache/redirects.conf"
 nginx_output_file="nginx/redirects.conf"
 
-declare -a a_redirects
-declare -a a_rewrites
+declare -a a_redirects=()
+declare -a a_rewrites=()
 
 # ============================================================================
 #
